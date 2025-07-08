@@ -1,118 +1,149 @@
-/* charity: water Brand Colors & Fonts
+/* =========================
+   Charity: Water Brand Colors & Fonts
+   =========================
+   Primary Colors:
+   - Yellow:     #FFC907
+   - Blue:       #2E9DF7
+   Secondary Colors:
+   - Light Blue: #8BD1CB
+   - Green:      #4FCB53
+   - Orange:     #FF902A
+   - Red:        #F5402C
+   - Dark Green: #159A48
+   - Pink:       #F16061
+   Fonts:
+   - Arial, sans-serif
+   ========================= */
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
-
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
-
-Fonts:
-- Proxima Nova
-- Avenir
-
-*/
-
-/* 
-  Charity: Water Landing Page Styles
-  This CSS uses the provided color palette and beginner-friendly styles.
-*/
-
-/* Set up the main font and background color for the whole page */
+/* ====== Base Styles ====== */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  margin: 0; /* Remove default margin */
+  padding: 0;
+  background: #FFF7E1; /* Soft background for the page */
+  font-family: Arial, sans-serif;
+  color: #003366; /* Default text color */
+}
+
+/* ====== Navigation Bars ====== */
+.navbar,
+.sub-navbar {
+  width: 100%; /* Stretch across the page */
+  background-color: #FFF7E1; /* Soft background for the nav */
+  color: #003366; /* Dark blue text */
+  padding: 0;
+}
+
+/* Center the nav links and remove bullets */
+.navbar ul,
+.sub-navbar ul {
+  list-style: none; /* No bullet points */
   margin: 0;
   padding: 0;
-  color: #222;
+  text-align: center; /* Center the links */
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
+/* Show links side by side with space */
+.navbar li,
+.sub-navbar li {
+  display: inline;
+  margin: 0 80px; /* Space between links */
 }
 
-/* Hero Section Styles */
+/* Style the nav links */
+.navbar a,
+.sub-navbar a {
+  color: #003366; /* Dark blue text */
+  text-decoration: none;
+  font-weight: thin;
+  font-size: 1.3em;
+}
+
+.navbar a:hover,
+.sub-navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the logo in the navbar */
+.logo {
+  height: 1.3em; /* About the same as the text */
+  vertical-align: right; /* Aligns the logo with the links */
+  margin-right: 16px;
+  margin-left: 35px;
+}
+/* Container for logo and links */
+.navbar-container {
+  white-space: nowrap;         /* Keep logo and links on one line */
+}
+
+/* Logo on the left */
+.logo {
+  display: inline-block;       /* Show logo inline */
+  vertical-align: middle;      /* Align with links */
+  margin-right: 16px;          /* Space between logo and links */
+  margin-left: 35px;
+  height: 1.3em;
+}
+
+/* Nav links inline with logo */
+.navbar ul {
+  display: inline-block;       /* Show links inline with logo */
+  vertical-align: left;      /* Align with logo */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Hero Section ====== */
 .hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
-}
-
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
-}
-
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
-}
-
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Add accent color to section headings */
-h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
-}
-
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-/* Style the impact story image */
-.impact-image {
+  background: #77A8BB; /* Light blue background */
+  color: #003366;      /* Dark blue text */
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
   width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  padding: 0;
 }
 
-/* Donate Button Styles */
+/* Hero content: side-by-side layout using table for beginners */
+.hero-content {
+  display: table;        /* Table layout for two columns */
+  width: 100%;           /* Full width of the section */
+  height: 520px;         /* Make the hero section taller */
+  box-sizing: border-box;
+}
+
+/* Left side: text */
+.hero-text {
+  display: table-cell;   /* Acts like a table cell */
+  width: 50%;            /* Takes up half the hero section */
+  vertical-align: middle;/* Vertically center the text */
+  padding: 40px 24px;    /* Space around the text */
+}
+
+/* Right side: image fills the cell */
+.hero-image-container {
+  display: table-cell;   /* Acts like a table cell */
+  width: 50%;            /* Takes up half the hero section */
+  vertical-align: middle;/* Vertically center the image */
+  padding: 0;            /* No padding so image fills the space */
+  margin: 0;
+}
+
+/* Make the image fill the container */
+.hero-image {
+  width: 100%;           /* Fill the right half */
+  height: 100%;          /* Fill the height of the hero section */
+  object-fit: cover;     /* Crop the image if needed to fill space */
+  display: block;
+  margin: 0;
+  border-radius: 0;
+}
+
+/* ====== Donate Button ====== */
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
+  background-color: #FFC907; /* Primary Yellow */
+  color: #003366;            /* Dark Blue text */
   padding: 14px 32px;
   text-decoration: none;
   border-radius: 6px;
@@ -123,76 +154,159 @@ h2 {
   transition: background 0.3s, transform 0.2s;
   border: none;
   cursor: pointer;
+  text-align: center;
 }
 
-/* Change button color when hovered */
 .donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+  background-color: #FFD84A; /* Lighter yellow on hover */
 }
 
-/* Add some spacing between sections */
-section {
-  margin-bottom: 20px;
+/* ====== Responsive: stack hero content on small screens ====== */
+@media (max-width: 700px) {
+  .hero-content {
+    display: block;
+    padding: 24px 4px;
+    height: auto; /* Let height grow naturally on small screens */
+  }
+  .hero-text,
+  .hero-image-container {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .hero-image {
+    margin: 16px auto;
+    max-width: 90%;
+    height: auto;
+  }
+}
+/* Make the top nav bar taller */
+.navbar {
+  padding-top: 20px;   /* Space above the content */
+  padding-bottom: 20px;/* Space below the content */
+}
+/* Add padding to the top of the links in the sub-navbar */
+.sub-navbar ul {
+  padding-top: 16px; /* Adds space above the links */
+  /* You can change 16px to any number you like */
+}
+/* Center the text in the hero section */
+.hero-text {
+  text-align: center; /* This centers all text inside the hero-text area */
+} 
+/* Make the hero section heading and paragraph larger */
+.hero-text h1 {
+  font-size: 2.3em;    /* Makes the main headline bigger */
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
+.hero-text p {
+  font-size: 1.2em;  /* Makes the paragraph text a bit bigger */
+}
+/* Make the space between the hero section text elements larger */
+.hero-text h1 {
+  font-size: 2.3em;      /* Bigger headline */
+  margin-bottom: 50px; /* More space below the headline */
+}
 
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
+.hero-text p {
+  font-size: 1.4em;    /* Bigger paragraph */
+  margin-bottom: 40px; /* More space below the paragraph */
+} 
+/* Make the space above the text in the hero section smaller */
+.hero-text {
+  /* Only a little space above the text */
+  padding-top: 8px;
+  /* Keep the text centered */
+  text-align: center;
+}
+/* Make the space between letters in the hero section text larger */
+.hero-text h1,
+.hero-text p,
+.hero-text a {
+  letter-spacing: 1.8px; /* Adds more space between letters */
+} 
+/* Make the space between lines in the hero section text larger */
+.hero-text h1,
+.hero-text p {
+  line-height: 1.6; /* Adds more space between lines */
+} 
+/* Style for the row of donate buttons under the sub-navbar links */
+.donate-buttons-row {
+  text-align: center;    /* Center the buttons */
+  margin-top: 16px;      /* Space above the buttons */
+  text-decoration: none; /* No underline on the buttons */
+}
+
+/* Space between each donate button */
+.donate-buttons-row .donate-button {
+  margin: 0 96px;         /* Space left and right of each button */
+}
+/* Make all donate buttons dark blue with white text */
+.donate-buttons-row .donate-button {
+  background-color: #003366; /* Dark blue background */
+  color: #FFF7E1;            /* Soft yellow text */
+  margin: 0 96px;            /* Space left and right of each button */
+  border: none;
+  text-decoration: none; /* No underline */
+} 
+/* Make sure donate button text is NOT underlined on hover */
+.donate-button:hover {
+  text-decoration: none; /* No underline when hovering */
+}
+/* Make the donate button in the hero section turn green when hovered */
+.donate-button:hover {
+  background-color: #159a48; /* Green background on hover */
+  color: #FFF7E1;            /* Soft yellow text on hover */
+  text-decoration: none;     /* No underline on hover */
+}
+/* ===========================
+   Responsive Styles for Small Screens
+   =========================== */
+
+/* This rule applies when the screen is 700px wide or less */
+@media (max-width: 700px) {
+  /* Stack hero section content vertically */
+  .hero-content {
+    display: block;         /* Stack text and image */
+    padding: 16px 4px;      /* Less padding on small screens */
+    height: auto;           /* Let height grow naturally */
   }
 
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
+  .hero-text,
+  .hero-image-container {
+    display: block;         /* Each takes full width */
+    width: 100%;
+    text-align: center;     /* Center the text */
+    padding: 0;             /* Remove side padding */
   }
 
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
+  .hero-image {
+    width: 90%;             /* Image is smaller and centered */
+    max-width: 300px;       /* Don't let it get too big */
+    margin: 16px auto;
+    height: auto;
   }
 
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
-  }
-
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
+  /* Make nav links stack vertically and easier to tap */
+  .navbar ul,
+  .sub-navbar ul {
+    display: block;         /* Stack links vertically */
     text-align: center;
   }
 
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
-  }
-}
-
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
+  .navbar li,
+  .sub-navbar li {
+    display: block;         /* Each link on its own line */
+    margin: 12px 0;         /* Space above and below each link */
   }
 
-  .impact-image {
-    width: 300px;
+  /* Make donate buttons stack and fill most of the screen */
+  .donate-buttons-row .donate-button {
+    display: block;         /* Each button on its own line */
+    width: 80%;             /* Button fills most of the screen */
+    margin: 12px auto;      /* Space above/below and center */
+    font-size: 1.1em;       /* Slightly bigger text for tapping */
   }
 }
